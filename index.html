@@ -1,86 +1,384 @@
 <!DOCTYPE html>
 <html lang='en'>
+
 <head>
-<meta charset='UTF-8'>
-<link rel='icon' type='svg' href='systemui.svg'/>
-<meta name='viewport' content='width=device-width, initial-scale=1.0'/>
-<title>mitbit</title>
+  <meta charset='UTF-8'>
+  <link rel='icon' type='svg' href='systemui.svg' />
+  <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+  <title>lnlnlnln.com</title>
 </head>
-  
+
 <body>
-  <div class=grid>
-  <div class=row>
-  <div class=col sm-5 md-2 lg-5>
-  <div class=home>
-  <div id=sidemenu class=sidemenu>
-    <ul>
-      <a><b><h>mitBit</h></b></a>
-      <a><li>mitBit</li></a>
-      <a><li>Help</li></a>
+
+  <div class="menu">
+    <b>
+      <h>lnlnlnln</h>
+    </b>
+    <ul class="dropdown">
+      <li>New</li>
+      <ul class="dropdown__content">
+        <li>This week</li>
+        <li>This month</li>
+      </ul>
     </ul>
+    <ul class="dropdown">
+      <li>Women</li>
+      <ul class="dropdown__content">
+        <li>Shirts</li>
+        <li>Tshirts</li>
+        <li>Tops</li>
+        <li>Shorts</li>
+        <li>Skirts</li>
+      </ul>
+    </ul>
+    <ul class="dropdown">
+      <li>Men</li>
+      <ul class="dropdown__content">
+        <li>Shirts</li>
+        <li>Tshirts</li>
+        <li>Tops</li>
+        <li>Shorts</li>
+      </ul>
+    </ul>
+    <ul class="dropdown">
+      <li>More</li>
+      <ul class="dropdown__content">
+        <li>Lifestyle</li>
+        <li>Books</li>
+      </ul>
+    </ul>
+    <button id="bagbtn">(0)</button><button id="wishlistbtn"><img src=""></button><button id="profilbtn"><img src=""></button><button id="lookupbtn"><img src=""></button>
   </div>
-  </div>
-  </div>
-  
-  <div class=col sm-5 md-2 lg-5>
-  <h1 class=mid>mitBit</h1>
-  </div>
-  
-  <div class=li>
-  </div>
-    
-  <div class=div>
-    <div class=d>
-      <h>Your Business. Your Tools.</h></br></br>
-  <p>Use mitBit to receive Bitcoin from your customers directly to your Bitbox, Ledger or Trezor.</br></br>Build custom solutions to meet your Business needs with our powerful simple secure API.</p>
+
+  <div class="div">
+    <ul>
+      <li>Women</li>
+      <li>Shirts</li>
+    </ul>
+    <div>
+      <h class="right">(100 Products)</h>
+      <button id="filterbtn" class="filterbtn">Filter (0)</button>
     </div>
   </div>
-    
- <div class=li>
- </div>
- 
-  <button id=btn class=btn>btn
-  </button>  
-    
-  <button class=bllbtn>
-    mitBit</button>
-    
-  <div class=div>
-    <div class=d>
-    <h2>mitBit</h2>
-    <p></p>
-    <b><h>Subscribe to our newsletter</h></b></br>
+
+  <div id="filter" class="filter">
+    <button id="closebtn" class="closebtn">Close</button>
+    <div class="div">
+      <div class="grid">
+        <div class="div">
+          <div class="size">
+            <button id="sizebtn" class="sizebtn">Size</button>
+            </br></br>
+            <div id="size" class="size0"><input id="XS" type="checkbox" value="XS">
+              <label for="XS">XS</label></br>
+              <input id="S" type="checkbox" value="S">
+              <label for="S">S</label></br>
+              <input id="M" type="checkbox" value="M"><label for="M">M</label></br>
+              <input id="L" type="checkbox" value="L">
+              <label for="L">L</label></br>
+              <input id="XL" type="checkbox" value="XL">
+              <label for="XL">XL</label></br>
+              <input id="XXL" type="checkbox" value="XXL"><label for="XXL">XXL</label>
+            </div>
+          </div>
+        </div>
+        <div class="div">
+          <div class="price">
+            <button id="pricebtn" class="pricebtn">Price</button></br></br>
+            <div id="price" class="price0">
+              <div class="slider">
+
+                <input id="slider" type="range" min="100" max="2200" step="10">
+                <div class="div">
+                  <div class="slider_left"><b>100</b></div>
+                  <div class="slider_right"><b>2200</b></div>
+                </div>
+              </div>
+            </div>
+            <button id="showbtn" class="showbtn">Show (100) products</button>
+          </div>
+        </div>
+        <div class="div">
+          <div class="color">
+            <button id="colorbtn" class="colorbtn">Color</button></br></br>
+            <div id="color" class="color0">
+              <input id="white" type="checkbox" value="white">
+              <label for="XS">White</label></br>
+              <input id="black" type="checkbox" value="black">
+              <label for="black">Black</label></br>
+              <input id="blue" type="checkbox" value="blue">
+              <label for="blue">Blue</label></br>
+              <input id="green" type="checkbox" value="green">
+              <label for="green">Green</label></br>
+              <input id="pink" type="checkbox" value="pink">
+              <label for="pink">Pink</label></br>
+              <input id="grey" type="checkbox" value="grey">
+              <label for="grey">Grey</label>
+            </div>
+          </div>
+        </div>
+        <div class="div">
+          <div class="sort">
+            <button id="sortbtn" class="sortbtn">Sort By</button></br></br>
+            <div id="sort" class="sort0"><input id="new" type="radio" name="sort" value="new">
+              <label for="new">New</label><br>
+
+              <input id="bestselling" type="radio" name="sort" value="bestselling">
+              <label for="bestselling">Bestselling</label><br>
+
+              <input id="lowtohigh" type="radio" name="sort" value="lowtohigh">
+              <label for="lowtohigh">Price low to high</label><br>
+
+              <input id="hightolow" type="radio" name="sort" value="hightolow">
+              <label for="hightolow">Price high to low</label><br>
+
+              <input id="oldtonew" type="radio" name="sort" value="oldtonew">
+              <label for="oldtonew">Old to new</label><br>
+
+              <input id="newtoold" type="radio" name="sort" value="newtoold">
+              <label for="newtoold">New to old</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="bag" class="bag">
+    <h>Shopping Bag</h><button id="closeBagbtn" class="closebtn">Close</button></br></br>
+    <div class="bag_div">
+    </div>
+  </div>
+
+  <div id="wishlist" class="wishlist">
+    <h>Wishlist</h><button id="closeWishlistbtn" class="closebtn">Close</button></br></br>
+    <div class="wishlist_div">
+    </div>
+  </div>
+
+  <div class="collection">
+    <div id="shirt002" class="product">
+      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
+      <button class="product_wishlist"><img src=""></button>
+      <div class="product_title">
+        <p>
+          <a href="#">Shirt in Slim Fit</a>
+        </p>
+      </div>
+      <div class="product_price">
+        <p>10.00</p>
+      </div>
+      <div class="product_size">
+        <p>S, L, M</p>
+      </div>
+    </div>
+    <div id="shirt1" class="product">
+      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
+      <button class="product_wishlist"><img src=""></button>
+      <div class="product_title">
+        <p>
+          <a href="#">Shirt in Loose Fit</a>
+        </p>
+      </div>
+      <div class="product_price">
+        <p>100.00</p>
+      </div>
+      <div class="product_size">
+        <p>XS, S</p>
+      </div>
+    </div>
+    <div id="shirt01" class="product">
+      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
+      <button class="product_wishlist"><img src=""></button>
+      <div class="product_title">
+        <p>
+          <a href="#">Shirt with loose silouette</a>
+        </p>
+      </div>
+      <div class="product_price">
+        <p>100.00</p>
+      </div>
+      <div class="product_size">
+        <p>L</p>
+      </div>
+    </div>
+    <div id="shirt02" class="product">
+      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
+      <button class="product_wishlist"><img src=""></button>
+      <div class="product_title">
+        <p>
+          <a href="#">Popeline Shirt in White</a>
+        </p>
+      </div>
+      <div class="product_price">
+        <p>200.00</p>
+      </div>
+      <div class="product_size">
+        <p>S</p>
+      </div>
+    </div>
+    <div id="shirt2" class="product">
+      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
+      <button class="product_wishlist"><img src=""></button>
+      <div class="product_title">
+        <p>
+          <a href="#">Long Shirt in Light blue</a>
+        </p>
+      </div>
+      <div class="product_price">
+        <p>120.00</p>
+      </div>
+      <div class="product_size">
+        <p>S, L</p>
+      </div>
+    </div>
+    <div id="shirt10" class="product">
+      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
+      <button class="product_wishlist"><img src=""></button>
+      <div class="product_title">
+        <p>
+          <a href="#">Slim Fit Shirt</a>
+        </p>
+      </div>
+      <div class="product_price">
+        <p>20.00</p>
+      </div>
+      <div class="product_size">
+        <p>L, M</p>
+      </div>
+    </div>
+    <div id="shirt100" class="product">
+      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
+      <button class="product_wishlist"><img src=""></button>
+      <div class="product_title">
+        <p>
+          <a href="#">Twill Shirt</a>
+        </p>
+      </div>
+      <div class="product_price">
+        <p>100.00</p>
+      </div>
+      <div class="product_size">
+        <p>S, L, M</p>
+      </div>
+    </div>
+    <div id="shirt001" class="product">
+      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
+      <button class="product_wishlist"><img src=""></button>
+      <div class="product_title">
+        <p>
+          <a href="#">Loose Fit Shirt</a>
+        </p>
+      </div>
+      <div class="product_price">
+        <p>10.00</p>
+      </div>
+      <div class="product_size">
+        <p>S, L</p>
+      </div>
+    </div>
+    <div id="shirt001" class="product">
+      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
+      <button class="product_wishlist"><img src=""></button>
+      <div class="product_title">
+        <p>
+          <a href="#">Poplin Shirt</a>
+        </p>
+      </div>
+      <div class="product_price">
+        <p>220.00</p>
+      </div>
+      <div class="product_size">
+        <p>S, L, M</p>
+      </div>
+    </div>
+    <div id="shirt002" class="product">
+      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
+      <button class="product_wishlist"><img src=""></button>
+      <div class="product_title">
+        <p>
+          <a href="#">Print Silk Shirt</a>
+        </p>
+      </div>
+      <div class="product_price">
+        <p>100.00</p>
+      </div>
+      <div class="product_size">
+        <p>S, L, M</p>
+      </div>
+    </div>
+    <div id="shirt200" class="product">
+      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
+      <button class="product_wishlist"><img src=""></button>
+      <div class="product_title">
+        <p>
+          <a href="#">Print Shirt</a>
+        </p>
+      </div>
+      <div class="product_price">
+        <p>2200.00</p>
+      </div>
+      <div class="product_size">
+        <p>L, M</p>
+      </div>
+    </div>
+    <div id="shirt010" class="product">
+      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
+      <button class="product_wishlist"><img src=""></button>
+      <div class="product_title">
+        <p>
+          <a href="#">Button Up Shirt</a>
+        </p>
+      </div>
+      <div class="product_price">
+        <p>10.00</p>
+      </div>
+      <div class="product_size">
+        <p>L</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="l">
+  </div>
+
+  <h class="left">lnlnlnln.com</h>
+  <h class="right">lnlnlnllnlnln 100</h></br>
+  <h class="right">1001 lnlnlnlnln</h>
+
+  <div class="newsletter">
+    <h1>Subscribe to our newsletter</h1>
     <p>News directly into your inbox</p></br>
     <form action="" method="">
-    <input id=email type="text" placeholder="Your Email">
-    <button id=subbtn class=subbtn type="submit">Subscribe</button>
+      <input id="email" type="text" placeholder="Fill in your email address">
+      <button id="subbtn" class="subbtn" type="submit">Subscribe</button>
     </form>
   </div>
-  </div>
-    
-  <div class=col sm-5 md-2 lg-5>
-  <div class=li>
-  </div>
-    
-  <div class=mid>
-  <div id=menu class=menu>
-  <div class=mid>
-    <a href=""><h>Help</h></a>
-    <a href=""><h>Wix</h></a>
-   <a href="https://github.com/dwnmmsnn>"><h>Github</h></a>
-    <a src="https://www.linkedin.com/in/sarah-floegel-08b07021b?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app"><h>LinkedIn</h></a>
-    </div>
-    </div>
-    
-<div class=li>
-</div>
-    
-</div>
-</div>
 
-</div>
-</div>
+  <div>
+    <ul class="link">
+      <li>lnlnlnln</li>
+      <li>Shipping Policy</li>
+      <li>Return Policy</li>
+      <li>Terms</li>
+      <li>Imprint</li>
+      <li>Customer Support</li>
+      <li>Jobs</li>
+    </ul>
+  </div>
 
 </body>
-  
+
 </html>
