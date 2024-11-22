@@ -196,10 +196,10 @@ window.addEventListener("scroll", function () {
   // check if .menu is in the viewport
   if (window.pageYOffset >= menuTopOffset) {
     div.style.position = "fixed";
-    div.style.top = "0"; // fix to the top of the viewport
+    div.style.top = "0"; // fit to the top of the viewport
   } else {
     div.style.position = "absolute";
-    div.style.top = "10%"; // reset top top 10%
+    div.style.top = "10.29%"; // reset position to top 10%
   }
 });
 
@@ -225,7 +225,7 @@ showBtn.addEventListener("click", function () {
   document.body.style.overflow = "";
 });
 
-// Filter resize .size .color height on .sizebtn or colorbtn click
+// Filter resize .size .color height on .sizebtn on colorbtn click
 
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.querySelector(".grid");
@@ -292,7 +292,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // Filter products by color
 
 document.addEventListener("DOMContentLoaded", function () {
-  // Function to filter products by color
+  // function to filter products by title
   function filterColors() {
     const selectedColors = Array.from(
       document.querySelectorAll('.color input[type="checkbox"]:checked')
@@ -300,15 +300,14 @@ document.addEventListener("DOMContentLoaded", function () {
     const products = document.querySelectorAll(".collection .product");
 
     products.forEach((product) => {
-      const productName = product.querySelector(".product-title p").innerText; // Get product name
+      const productName = product.querySelector(".product-title p").innerText; // get product title
       const isVisible =
         selectedColors.length === 0 ||
-        selectedColors.some((color) => productName.includes(color)); // Check if any selected color is in the product name
+        selectedColors.some((color) => productName.includes(color)); // check if selected color is in the product title
       product.style.display = isVisible ? "block" : "none"; // Show or hide product
     });
   }
 
-  // Add event listeners for color checkboxes
   const colorCheckboxes = document.querySelectorAll(
     '.color input[type="checkbox"]'
   );
@@ -354,11 +353,25 @@ function wishlist() {
   }
 }
 
+// Close Wishlist Button
+
+const wishClosebtn = document.getElementById("wishClosebtn");
+
+wishClosebtn.addEventListener("click", wishlist);
+function wishlist() {
+  let wishlist = document.getElementById("wishlist");
+  if (wishlist.style.display == "block") {
+    wishlist.style.display = "none";
+  } else {
+    wishlist.style.display = "block";
+  }
+}
+
 // Wishlist
 
 // Function to initialize the wishlist on page load
 function loadWishlistFromStorage() {
-  const wishlist = document.querySelector(".wishlist");
+  const wishlist = document.querySelector(".wishlist_div");
   const storedWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
   // Clear current wishlist content
@@ -395,7 +408,7 @@ document.querySelectorAll(".product_wishlist").forEach((button) => {
 });
 
 function addProductToWishlist(productData) {
-  const wishlist = document.querySelector(".wishlist");
+  const wishlist = document.querySelector(".wishlist_div");
 
   const wishlistProduct = createWishlistProductElement(productData);
   wishlist.appendChild(wishlistProduct);
@@ -433,7 +446,7 @@ function createWishlistProductElement(productData) {
 
 window.addEventListener("DOMContentLoaded", loadWishlistFromStorage);
 
-// bag button
+// Bag Button
 
 const bagbtn = document.getElementById("bagbtn");
 
@@ -447,10 +460,24 @@ function bag() {
   }
 }
 
+// Bag Close Button
+
+const bagClosebtn = document.getElementById("bagClosebtn");
+
+bagClosebtn.addEventListener("click", bag);
+function bag() {
+  let bag = document.getElementById("bag");
+  if (bag.style.display == "block") {
+    bag.style.display = "none";
+  } else {
+    bag.style.display = "block";
+  }
+}
+
 // bag
 
 function loadWishlistFromStorage() {
-  const wishlist = document.querySelector(".wishlist");
+  const wishlist = document.querySelector(".wishlist_div");
   const storedWishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
   wishlist.innerHTML = "";
@@ -527,7 +554,7 @@ function removeProductFromWishlist(productId) {
 }
 
 function addProductToBag(productData) {
-  const bag = document.querySelector(".bag");
+  const bag = document.querySelector(".bag_div");
 
   const bagProduct = createBagProductElement(productData);
   bag.appendChild(bagProduct);
@@ -601,7 +628,7 @@ window.addEventListener("DOMContentLoaded", () => {
 
 // Modify addProductToBag to call updateBagCount after adding a product to the bag
 function addProductToBag(productData) {
-  const bagDiv = document.querySelector(".bag");
+  const bagDiv = document.querySelector(".bag_div");
 
   // Create and add product element to bag div
   const bagProduct = createBagProductElement(productData);
