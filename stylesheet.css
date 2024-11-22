@@ -962,11 +962,16 @@ body {
 /* footer */
 
 .newsletter {
-  margin: 20px;
-  margin-top: 60px;
-  margin-bottom: 60px;
+  width: 290px;
+  margin-left: 20px;
+  margin-top: 29px;
+  margin-bottom: 29px;
   padding: 0;
   text-align: left;
+}
+
+.newsletter p {
+  color: #999999;
 }
 
 form {
@@ -975,7 +980,7 @@ form {
 }
 
 input {
-  width: 400px;
+  width: 290px;
   height: auto;
   color: #;
   border: none;
@@ -987,17 +992,7 @@ input {
 }
 
 input::placeholder {
-  color: #;
-}
-
-.subbtn {
-  border: none;
-  font-size: 14px;
-  background: #ffffff;
-  color: #;
-  cursor: pointer;
-  margin-top: -6px;
-  margin-left: 10px;
+  color: #999999;
 }
 
 /* filter */
@@ -1210,7 +1205,7 @@ input::placeholder {
   grid-template-columns: repeat(4, 1fr);
   max-width: 100%;
   margin: 20px;
-  margin-top: 17%;
+  margin-top: 16%;
   margin-bottom: 50px;
 }
 
@@ -1482,6 +1477,7 @@ input[type="range"]::-ms-fill-upper {
   position: absolute;
   top: 20px;
   right: -200px;
+  font-size: 14px;
 }
 
 .wishlistProduct {
@@ -1589,6 +1585,7 @@ input[type="range"]::-ms-fill-upper {
   position: absolute;
   top: 20px;
   right: -200px;
+  font-size: 14px;
 }
 
 .bagProduct {
@@ -1694,5 +1691,5 @@ input[type="range"]::-ms-fill-upper {
 .bagDiv .right {
   margin: 0;
 }
- 
+
 }
