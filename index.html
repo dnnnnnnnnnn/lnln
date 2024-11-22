@@ -48,7 +48,12 @@
         <li>Books</li>
       </ul>
     </ul>
-    <button id="bagbtn">(0)</button><button id="wishlistbtn"><img src=""></button><button id="profilbtn"><img src=""></button><button id="lookupbtn"><img src=""></button>
+    <div class="btn-group">
+      <button id="bagbtn" class="btn">(0)</button>
+      <button id="wishlistbtn" class="btn">btn</button>
+      <button id="profilbtn" class="btn">btn</button>
+      <button id="lookupbtn" class="btn">btn</button>
+    </div>
   </div>
 
   <div class="div">
@@ -63,7 +68,7 @@
   </div>
 
   <div id="filter" class="filter">
-    <button id="closebtn" class="closebtn">Close</button>
+    <button id="closebtn" class="closebtn">Close (-)</button>
     <div class="div">
       <div class="grid">
         <div class="div">
@@ -91,8 +96,8 @@
 
                 <input id="slider" type="range" min="100" max="2200" step="10">
                 <div class="div">
-                  <div class="slider_left"><b>100</b></div>
-                  <div class="slider_right"><b>2200</b></div>
+                  <div class="slider_left">100</div>
+                  <div class="slider_right">2200</div>
                 </div>
               </div>
             </div>
@@ -145,23 +150,37 @@
     </div>
   </div>
 
-  <div id="bag" class="bag">
-    <h>Shopping Bag</h><button id="closeBagbtn" class="closebtn">Close</button></br></br>
+  <div id="bag" class="ln">
+    <h>Shopping Bag</h><button id="bagClosebtn" class="closebtn">Close (-)</button>
     <div class="bag_div">
     </div>
+    <div class="bagDiv">
+      <h class="left">Subtotal</h>
+      <p class="right">100.00</p></br>
+
+      <b>
+        <h class="left">Total</h>
+        <p class="right">100.00</p>
+      </b></br>
+    </div>
+    <button class="checkoutbtn">Checkout</button>
   </div>
 
-  <div id="wishlist" class="wishlist">
-    <h>Wishlist</h><button id="closeWishlistbtn" class="closebtn">Close</button></br></br>
+  <div id="wishlist" class="ll">
+    <h>Wishlist</h>
+    <button id="wishClosebtn" class="closebtn">Close (-)</button>
     <div class="wishlist_div">
     </div>
   </div>
 
+  <div id="wishlist" class="wishlist"></div>
+  <div id="bag" class="bag"></div>
+
   <div class="collection">
     <div id="shirt002" class="product">
-      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a class="pimg" href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
       <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
-      <button class="product_wishlist"><img src=""></button>
+      <button class="product_wishlist"><img src="">btn</button>
       <div class="product_title">
         <p>
           <a href="#">Shirt in Slim Fit</a>
@@ -175,7 +194,7 @@
       </div>
     </div>
     <div id="shirt1" class="product">
-      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a class="pimg" href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
       <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
       <button class="product_wishlist"><img src=""></button>
       <div class="product_title">
@@ -191,7 +210,7 @@
       </div>
     </div>
     <div id="shirt01" class="product">
-      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a class="pimg" href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
       <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
       <button class="product_wishlist"><img src=""></button>
       <div class="product_title">
@@ -207,7 +226,7 @@
       </div>
     </div>
     <div id="shirt02" class="product">
-      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a class="pimg" href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
       <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
       <button class="product_wishlist"><img src=""></button>
       <div class="product_title">
@@ -223,7 +242,7 @@
       </div>
     </div>
     <div id="shirt2" class="product">
-      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a class="pimg" href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
       <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
       <button class="product_wishlist"><img src=""></button>
       <div class="product_title">
@@ -239,7 +258,7 @@
       </div>
     </div>
     <div id="shirt10" class="product">
-      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a class="pimg" href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
       <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
       <button class="product_wishlist"><img src=""></button>
       <div class="product_title">
@@ -255,7 +274,7 @@
       </div>
     </div>
     <div id="shirt100" class="product">
-      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a class="pimg" href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
       <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
       <button class="product_wishlist"><img src=""></button>
       <div class="product_title">
@@ -271,7 +290,7 @@
       </div>
     </div>
     <div id="shirt001" class="product">
-      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a class="pimg" href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
       <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
       <button class="product_wishlist"><img src=""></button>
       <div class="product_title">
@@ -287,7 +306,7 @@
       </div>
     </div>
     <div id="shirt001" class="product">
-      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a class="pimg" href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
       <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
       <button class="product_wishlist"><img src=""></button>
       <div class="product_title">
@@ -303,7 +322,7 @@
       </div>
     </div>
     <div id="shirt002" class="product">
-      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a class="pimg" href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
       <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
       <button class="product_wishlist"><img src=""></button>
       <div class="product_title">
@@ -319,7 +338,7 @@
       </div>
     </div>
     <div id="shirt200" class="product">
-      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a class="pimg" href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
       <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
       <button class="product_wishlist"><img src=""></button>
       <div class="product_title">
@@ -335,7 +354,7 @@
       </div>
     </div>
     <div id="shirt010" class="product">
-      <a href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
+      <a class="pimg" href="https://ibb.co/7tmT08t"><img class="img" src="https://i.ibb.co/GQS1rBQ/Screenshot-2024-10-27-at-12-40-59.jpg" alt="Screenshot-2024-10-27-at-12-40-59" border="0"></a>
       <a href="https://ibb.co/Bs36Fmn"><img class="img1" src="https://i.ibb.co/XJL5M9Y/Screenshot-2024-10-27-at-12-40-47.jpg" alt="Screenshot-2024-10-27-at-12-40-47" border="0"></a>
       <button class="product_wishlist"><img src=""></button>
       <div class="product_title">
@@ -360,11 +379,13 @@
   <h class="right">1001 lnlnlnlnln</h>
 
   <div class="newsletter">
-    <h1>Subscribe to our newsletter</h1>
-    <p>News directly into your inbox</p></br>
+    <b>
+      <h>Subscribe to our newsletter</h>
+    </b></br></br>
+    <p>Subscribe to our newsletter to get 10% off your first order.</p></br>
+    <p>News directly into your inbox.</p></br></br>
     <form action="" method="">
       <input id="email" type="text" placeholder="Fill in your email address">
-      <button id="subbtn" class="subbtn" type="submit">Subscribe</button>
     </form>
   </div>
 
@@ -380,8 +401,8 @@
     </ul>
   </div>
 
-<script src='index.js'></script>
-
 </body>
+
+</html>
   
 </html>
