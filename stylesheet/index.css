@@ -210,6 +210,14 @@ input {
   gap: 4px;
 }
 
+.imgGroup button {
+  wdith: 20px;
+  height: 10px;
+  border: 1px solid #999999;
+  border-radius: 10px;
+  background: none;
+}
+
 .imgGroup img {
   width: 20px;
   filter: invert(70%) sepia(0%) saturate(84%) hue-rotate(167deg) brightness(89%)
