@@ -1,1 +1,14 @@
+@font-face {
+  font-family: "Nimbus Sans";
+  src: url("stylesheet/fonts/some-font.otf") format("opentype");
+}
 
+@media only screen and (min-device-width: 480px){
+
+ 
+}
+
+@media only screen and (min-device-width: 768px){
+
+ 
+}
