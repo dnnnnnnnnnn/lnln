@@ -3,7 +3,9 @@
   src: url("./public/font/Nimbus-Reg.otf") format("opentype");
 }
 
-@media only screen and (min-device-width: 480px){
+@media only screen and (min-device-width: 480px) {
+
+
 
 * {
   margin: 0;
@@ -16,7 +18,12 @@ body {
  
 }
 
-@media only screen and (min-device-width: 768px){
+@media only screen and (min-device-width: 768px) {
+
+@font-face {
+  font-family: "Nimbus-Reg";
+  src: url("./public/font/Nimbus-Reg.otf") format("opentype");
+}
   
 * {
   margin: 0;
