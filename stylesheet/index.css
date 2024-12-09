@@ -1,6 +1,6 @@
 @font-face {
-  font-family: "Nimbus Sans";
-  src: url("stylesheet/fonts/some-font.otf") format("opentype");
+  font-family: "Nimbus Reg";
+  src: url("public/font/Nimbus-Reg.otf") format("opentype");
 }
 
 @media only screen and (min-device-width: 480px){
